@@ -1,0 +1,103 @@
+
+.center{
+      text-align: center;
+}
+header{
+  background-color: #393942;
+      width: 100%;
+      height: 55px;
+      color: white;
+}
+#sectionHeader{
+  display:flex;
+
+}
+#nav{
+  margin: 0 auto;
+}
+nav > ul {
+display:flex;
+}
+nav > ul > li {
+  text-decoration:none;
+  list-style-type: none;
+  color:white;
+    margin-top: 9px;
+    margin-right: 35px;
+}
+nav > ul > li > a {
+  color:white;
+  font-size: 18px;
+  text-decoration: none;
+}
+.main{
+  width:100%;
+  height:600px;
+}
+
+/*..........Page d 'accueil .............................'*/
+#accueil{
+  text-align:center;
+  display:flex;
+  justify-content:space-around;
+  flex-wrap:wrap;
+  width:100%;
+}
+.enfantAccueil{
+width: 375px;
+width:30%;
+}
+.imagesAccgueil{
+width: 200px;
+}
+
+
+/*.....................Page bibliotheque.........................*/
+.imgBibliotheque{
+  max-width: 200px;
+}
+#genreImage{
+  display: flex;
+justify-content: space-around;
+flex-wrap: wrap;
+background-color: #8a8ad6;
+width: 75%;
+margin: 0 auto;
+padding-bottom: 45px;
+}
+.categorieFilm{
+  width: 25%;
+  background-color: white;
+  margin-top: 42px;
+  text-align: center;
+  margin-left: 15px;
+  height: auto;
+padding-bottom: 10px;
+}
+
+/* ...............genre....................................*/
+/*  display:flex;
+  justify-content:center;
+  width:50%;
+}
+*/
+
+/*.......................Formulaire..................................*/
+#sectionFormulaire{
+  width: 500px;
+background-color: #83989c;
+margin: 0 auto;
+min-height: 210px;
+}
+.form-group{
+    padding-top: 25px;
+}
+
+/*..............footer....................................*/
+footer{
+  width:100%;
+  height:55px;
+  background-color: #393942;
+  margin-top: 55px;
+
+}
