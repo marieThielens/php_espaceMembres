@@ -28,6 +28,7 @@ if (isset($_SESSION['user_username'])) //isset($_SESSION['user_id']) AND
       <nav>
         <ul>
           <li><a href="inscription.php">S'inscrire</a></li>
+          <li><a href="minichat.php">Chat</a></li>
         </ul>
       </nav>
       </div>

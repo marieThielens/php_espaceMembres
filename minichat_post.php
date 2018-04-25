@@ -21,7 +21,11 @@ if(isset($_POST['minichat']) && isset($_SESSION['user_username'])&& isset($_POST
         // Redirection du visiteur vers la page du minichat
         header('Location: minichat.php');
 
+}else{
+        header('Location: inscription.php');
+        console.log('vous n etes pas connecté');
 }
+
 
 
 ?>

@@ -1,6 +1,7 @@
 <?php
 include "include/header.php"; 
 include "minichat_post.php"; 
+
 ?>
 
 <!DOCTYPE html>
@@ -25,6 +26,11 @@ include "minichat_post.php";
         <input type="submit" name="minichat" value="Envoyer" />
 	</p>
     </form>
+
+<div>
+
+ <a href="core/deconnexion.php">Déconnexion</a> 
+</div>
 
 <?php
 

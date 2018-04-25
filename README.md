@@ -2,6 +2,7 @@
 
 - Un site sur lequel on peut s'inscrire, se connecter, se déconnecter et se désinscrire.
 - Quand l'utilisateur est connecté une session est ouverte et l'utilisateur est redirigé vers une page de chat avec ses messages
+- L'utilisateur ne peut pas rentrer dans le chat sans s'être connecté.
 
 - la page minichat.php contient le formulaire permettant d'ajouter un message et liste les 10 derniers messages.
 - insère le message reçu avec $_POST dans la base de données puis redirige versminichat.php.
@@ -13,6 +14,7 @@ dans le dossier core se trouve :
 - config.php : la carte d'identité de la db(nom de la db, mot de passe etc).
 - connect.php : include 'config.php'; La connexion à la base de donnée.
 - request.php : include 'connect.php'; Les requêtes à la base de donnée.
+- deconnexion.php : la page qui clore la session et les cookies
 
 ### différence entre include et require
 
@@ -68,6 +70,32 @@ if (isset($_SESSION['user_id']) AND isset($_SESSION['user_username']))
     echo 'Bonjour ' . $_SESSION['user_username'];
 }
 ?>
+```
+
+Déconnexion de la session :
+
+```PHP
+    session_start();
+
+// Détruit toutes les variables de session
+$_SESSION = array();
+
+// Si vous voulez détruire complètement la session, effacez également
+// le cookie de session.
+// Note : cela détruira la session et pas seulement les données de session !
+if (ini_get("session.use_cookies")) {
+    $params = session_get_cookie_params();
+    setcookie(session_name(), '', time() - 42000,
+        $params["path"], $params["domain"],
+        $params["secure"], $params["httponly"]
+    );
+}
+
+// Finalement, on détruit la session.
+session_destroy();
+    header('location: ../inscription.php');
+    echo 'Vous êtes déconnecté';
+
 ```
 
 ### Passer l'identifiant de session (session ID)

@@ -74,3 +74,4 @@ if(isset($_POST['delete'])){ // delete = name du bouton
   $delete->execute();
   echo 'enlevé de la base de donnée';
 }
+
